@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心语伴 Xinyuban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- 1. 落地页 -->
+<div id="landing-page" class="page active">
+    <div class="landing-content">
+        <!-- 3D 落地页大机器人 -->
+        <div class="robot-3d-large">
+            <div class="antenna-box"><div class="antenna-ball"></div></div>
+            <div class="head-box">
+                <div class="screen-inset">
+                    <div class="face-text" id="landing-face">●&nbsp;&nbsp;●</div>
+                    <div class="cheeks"><span></span><span></span></div>
+                </div>
+            </div>
+            <div class="shadow-blur"></div>
+        </div>
+
+        <h1 class="app-title">心语伴</h1>
+        <p class="app-slogan">Warm AI, Pure Soul.</p>
+        <button id="get-start-btn" class="btn-pill">开启心灵旅程</button>
+    </div>
+</div>
+
+<!-- 2. 聊天主界面 -->
+<div id="chat-page" class="page chat-layout">
+
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-area">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">心语伴</span>
+            </div>
+            <button id="new-chat-btn" class="add-btn" title="新对话">+</button>
+        </div>
+
+        <div class="session-container">
+            <ul id="session-list" class="session-list">
+                <!-- JS 生成列表 -->
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <button id="stats-btn" class="stats-link">
+                📊 思维链档案
+            </button>
+        </div>
+    </div>
+
+    <!-- 主工作区 -->
+    <div class="main-workspace">
+
+        <!-- 顶部栏 -->
+        <div class="workspace-header">
+            <div class="status-indicator">
+                <span class="dot pulse"></span>
+                <span id="robot-status-text">AI Consultant Ready</span>
+            </div>
+
+            <!-- 3D 可交互小机器人 -->
+            <div class="robot-wrapper" id="header-robot">
+                <div class="robot-body">
+                    <div class="antenna-small"><div class="ball"></div></div>
+                    <div class="head-small">
+                        <div class="screen-small">
+                            <div class="face-small" id="robot-face">^ ◡ ^</div>
+                            <div class="blush-small"><span></span><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 聊天滚动区域 -->
+        <div class="chat-scroll-area" id="chat-container">
+            <!-- 开场白 -->
+            <div id="opening-card" class="opening-card">
+                <h2>今天的心情像什么颜色？</h2>
+                <div class="chips-row" id="suggestions">
+                    <button class="chip">☁️ 有点灰暗</button>
+                    <button class="chip">🍊 充满活力</button>
+                    <button class="chip">🌊 平静如水</button>
+                </div>
+            </div>
+
+            <!-- 消息列表 -->
+            <div id="chat-history" class="chat-history">
+                <!-- 消息气泡 -->
+            </div>
+        </div>
+
+        <!-- 底部输入栏 -->
+        <div class="input-area-fixed">
+            <div class="input-capsule">
+                <input type="text" id="user-input" placeholder="在这里与我倾诉..." autocomplete="off">
+                <button id="send-btn" class="send-circle-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 统计模态框 -->
+<div id="stats-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-top">
+            <h3>思维链数据</h3>
+            <span class="close-btn">×</span>
+        </div>
+        <div class="table-box">
+            <table id="stats-table">
+                <thead>
+                <tr><th>阶段</th><th>情绪</th><th>需求</th><th>干预 / 工具</th><th>督导建议</th><th>小记</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

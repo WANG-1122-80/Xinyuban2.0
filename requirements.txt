@@ -1,0 +1,15 @@
+langchain
+langgraph
+langchain-openai
+langchain-community
+faiss-cpu
+python-dotenv
+pandas
+openpyxl
+python-docx
+langchain_huggingface
+sentence-transformers
+
+fastapi
+uvicorn
+jinja2
